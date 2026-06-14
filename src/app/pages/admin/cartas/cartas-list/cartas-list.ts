@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { cartasService } from '../../../../services/cartas-service';
+import { CartasService } from '../../../../services/cartas-service';
 import { Cartas } from '../../../../model/cartas';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,15 +10,15 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './cartas-list.html',
   styleUrl: './cartas-list.scss',
 })
-export class cartasList implements OnInit {
+export class CartasList implements OnInit {
   cartas: Cartas[] = [];
   loading = true;
-  constructor(private service: cartasService) {}
+  constructor(private service: CartasService) {}
 
   ngOnInit() {
     this.service.listar().subscribe((resposta) => {
-      this.loading = false;
-      //this.cartas = resposta;
-    });
+  this.loading = false;
+  this.cartas = resposta; 
+});
   }
 }

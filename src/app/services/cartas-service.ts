@@ -43,4 +43,9 @@ export class CartasService {
     const docRef = doc(this.firestore, `cartas/${id}`);
     return deleteDoc(docRef);
   }
+
+  buscarPorId(id: string) {
+  const docRef = doc(this.firestore, `cartas/${id}`);
+  return getDoc(docRef);
+}
 }
