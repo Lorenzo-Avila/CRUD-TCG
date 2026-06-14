@@ -1,0 +1,9 @@
+
+@if (errou) {
+    <p class="alerta-erro">{{ errou }}</p>
+}
+<input type="email" [(ngModel)]="usuario"/>
+<input type="password" [(ngModel)]="senha"/>
+<button (click)="entrar()">Entrar</button>
+
+<a href="novo" >Novo usuario</a>

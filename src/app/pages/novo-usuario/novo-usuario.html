@@ -1,0 +1,11 @@
+<a href="/">Voltar</a>
+
+@if (mensagem) {
+    <h3 class="mensagemAvisoUser">{{mensagem}}</h3>
+}
+
+<div><span>Nome:</span><input placeholder="Digite seu nome" type="text" [(ngModel)]="nome"/></div>
+<div><span>Email:</span><input placeholder="Digite seu email" type="email" [(ngModel)]="email"/></div>
+<div><span>Senha:</span><input placeholder="Digite sua senha" type="password" [(ngModel)]="senha"/></div>
+
+<button (click)="criarUsuario()">Cadastrar</button>

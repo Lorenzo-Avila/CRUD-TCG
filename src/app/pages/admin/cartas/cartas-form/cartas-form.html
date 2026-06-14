@@ -1,0 +1,42 @@
+<form [formGroup]="form" class="formulario-cartas">
+  <mat-form-field appearance="outline">
+    <mat-label>Nome do Pokémon/Carta:</mat-label>
+    <input matInput placeholder="Ex: Charizard" formControlName="nome" />
+    <mat-error>Campo obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Coleção/Expansão:</mat-label>
+    <input matInput placeholder="Ex: Coroa Estelar" formControlName="colecao" />
+    <mat-error>Campo obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Raridade:</mat-label>
+    <input matInput placeholder="Ex: Rara, Secreta" formControlName="raridade" />
+    <mat-error>Campo obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Preço:</mat-label>
+    <input matInput type="number" placeholder="R$ 0,00" formControlName="preco" />
+    <mat-error>Campo obrigatório e deve ser maior que zero</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Quantidade em Estoque:</mat-label>
+    <input matInput type="number" placeholder="Ex: 5" formControlName="estoque" />
+    <mat-error>Campo obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>URL da Imagem:</mat-label>
+    <input matInput placeholder="Informe o link da imagem da carta" formControlName="imagem" />
+  </mat-form-field>
+
+  <mat-divider></mat-divider>
+  
+  <div class="botoes-acao">
+    <button mat-raised-button color="primary" (click)="salvar()">Salvar Carta</button>
+  </div>
+</form>
