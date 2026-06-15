@@ -1,3 +1,4 @@
+// Loading state
 .loading-data {
     display: flex;
     align-items: center;
@@ -5,4 +6,46 @@
     gap: 10px;
     flex-direction: column;
     padding: 3em;
+    min-height: 400px;
+}
+
+// Estilos gerais da lista
+.cartas-container {
+    padding: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Estilos para tabelas Material
+table {
+    margin-top: 1em;
+    
+    tbody tr {
+        transition: background-color 0.2s ease;
+        
+        &:hover {
+            background-color: rgba(63, 81, 181, 0.05);
+        }
+    }
+}
+
+// Botões de ação
+button {
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// Cards individuais
+.card-item {
+    padding: 1em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
 }
