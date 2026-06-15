@@ -1,0 +1,59 @@
+// Container principal
+.home-container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Cabeçalho
+h1, h2 {
+    color: #1a237e;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+// Cards/seções
+.section {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+}
+
+// Botões
+button, a.btn {
+    padding: 0.75em 1.5em;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+// Textos informativos
+p {
+    line-height: 1.6;
+    color: #424242;
+}
+
+// Lista de itens
+ul, ol {
+    line-height: 1.8;
+    color: #424242;
+    
+    li {
+        margin-bottom: 0.5em;
+    }
+}

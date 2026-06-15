@@ -1,0 +1,58 @@
+// Estilos globais
+:root {
+    --primary-color: #3f51b5;
+    --primary-dark: #1a237e;
+    --primary-light: #f5f5f5;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --border-radius: 6px;
+}
+
+// Reset e base
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: var(--text-primary);
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+// Links
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: var(--primary-dark);
+    }
+}
+
+// Material overrides
+::ng-deep {
+    .mat-mdc-button,
+    .mat-mdc-raised-button,
+    .mat-mdc-stroked-button {
+        transition: all 0.3s ease;
+    }
+    
+    .mat-mdc-form-field {
+        width: 100%;
+    }
+    
+    .mat-mdc-toolbar {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}

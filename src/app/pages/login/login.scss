@@ -1,3 +1,115 @@
+// Container do login
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1em;
+}
+
+// Card do login
+.login-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2.5em;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// Título
+h1 {
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 1.8em;
+}
+
+// Subtítulo
+.login-subtitle {
+    text-align: center;
+    color: #757575;
+    margin-bottom: 2em;
+    font-size: 0.95em;
+}
+
+// Formulário
+.login-form {
+    margin-bottom: 1.5em;
+}
+
+// Grupo de formulário
+.form-group {
+    margin-bottom: 1.5em;
+    
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #1a237e;
+        font-weight: 500;
+        font-size: 0.95em;
+    }
+}
+
+// Input
+.form-input {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    
+    &:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+}
+
+// Botão de login
+.btn-login {
+    width: 100%;
+    padding: 0.9em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+    }
+    
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+// Footer
+.login-footer {
+    text-align: center;
+    color: #757575;
+    font-size: 0.9em;
+    
+    .link-novo {
+        color: #667eea;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+    }
+}
+
 // Alerta de erro
 .alerta-erro {
     background-color: #ffebee;

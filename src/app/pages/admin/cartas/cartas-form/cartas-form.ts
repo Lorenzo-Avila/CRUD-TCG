@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Cartas } from '../../../../model/cartas';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -16,6 +16,7 @@ import { CartasService } from '../../../../services/cartas-service';
     MatInputModule,
     MatDividerModule,
     MatButtonModule,
+    RouterLink,
   ],
   templateUrl: './cartas-form.html',
   styleUrl: './cartas-form.scss',

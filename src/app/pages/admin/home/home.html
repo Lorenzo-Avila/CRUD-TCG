@@ -1,3 +1,18 @@
-<p>home works!</p>
-<a routerLink="/admin/cartas">Ver Cartas</a> |
-<a routerLink="/admin/cartas/novo">Nova Carta</a>
+<div class="home-container">
+  <h1>Painel de Administração</h1>
+  <p>Bem-vindo à loja Pokémon TCG</p>
+
+  <div class="section">
+    <h2>Gerenciamento de Cartas</h2>
+    <p>Organize e controle todo o inventário de cartas Pokémon na sua loja.</p>
+
+    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
+      <a routerLink="/admin/cartas" class="btn" style="flex: 1; text-align: center;">
+        Ver Cartas
+      </a>
+      <a routerLink="/admin/cartas/novo" class="btn" style="flex: 1; text-align: center;">
+        Nova Carta
+      </a>
+    </div>
+  </div>
+</div>

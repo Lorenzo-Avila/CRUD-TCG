@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { LoginService } from '../../services/login-service';
 
 @Component({
   selector: 'app-novo-usuario',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './novo-usuario.html',
   styleUrl: './novo-usuario.scss',
 })
 export class NovoUsuario {
   nome:string = 'teste'; 
-  email:string = 'prisciele@gmail.com';
+  email:string = 'avila@gmail.com';
   senha:string = '12345';
   mensagem!:string;
 

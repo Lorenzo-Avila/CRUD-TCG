@@ -1,9 +1,44 @@
 
-@if (errou) {
-    <p class="alerta-erro">{{ errou }}</p>
-}
-<input type="email" [(ngModel)]="usuario"/>
-<input type="password" [(ngModel)]="senha"/>
-<button (click)="entrar()">Entrar</button>
+<div class="login-container">
+  <div class="login-card">
+    <h1>Acesso à Loja</h1>
+    <p class="login-subtitle">Pokémon TCG - Painel Administrativo</p>
 
-<a href="novo" >Novo usuario</a>
+    @if (errou) {
+      <p class="alerta-erro">{{ errou }}</p>
+    }
+
+    <form (submit)="entrar()" class="login-form">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input 
+          type="email" 
+          id="email"
+          [(ngModel)]="usuario" 
+          name="usuario"
+          placeholder="seu@email.com"
+          class="form-input"
+          required/>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input 
+          type="password" 
+          id="senha"
+          [(ngModel)]="senha" 
+          name="senha"
+          placeholder="••••••••"
+          class="form-input"
+          required/>
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+
+    <p class="login-footer">
+      Ainda não tem conta? 
+      <a routerLink="/novo" class="link-novo">Crie uma aqui</a>
+    </p>
+  </div>
+</div>
