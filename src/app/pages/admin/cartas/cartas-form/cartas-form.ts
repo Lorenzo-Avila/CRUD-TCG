@@ -82,7 +82,7 @@ export class CartasForm implements OnInit {
         this.cartasService.salvarCartas(carta)
           .then(() => {
             alert('Carta salva com sucesso!');
-            this.form.reset();
+            this.router.navigate(['/admin/cartas']);  // <-- adiciona navegação
           })
           .catch((erro) => console.error('Erro ao salvar:', erro));
       }

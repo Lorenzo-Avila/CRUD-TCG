@@ -5,53 +5,53 @@
     Cadastrar Nova Carta
   </button>
 
-  @if (loading) {
+  @if (cartas$ | async; as cartas) {
+    <mat-table [dataSource]="cartas" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="nome">
+        <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+        <mat-cell *matCellDef="let carta"> {{ carta.nome }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="colecao">
+        <mat-header-cell *matHeaderCellDef> Coleção </mat-header-cell>
+        <mat-cell *matCellDef="let carta"> {{ carta.colecao }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="raridade">
+        <mat-header-cell *matHeaderCellDef> Raridade </mat-header-cell>
+        <mat-cell *matCellDef="let carta"> {{ carta.raridade }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="preco">
+        <mat-header-cell *matHeaderCellDef> Preço </mat-header-cell>
+        <mat-cell *matCellDef="let carta"> {{ carta.preco | currency:'BRL' }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="estoque">
+        <mat-header-cell *matHeaderCellDef> Estoque </mat-header-cell>
+        <mat-cell *matCellDef="let carta"> {{ carta.estoque }} un </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="acoes">
+        <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+        <mat-cell *matCellDef="let carta">
+          <button mat-icon-button color="accent" [routerLink]="['/admin/cartas/editar', carta.id]">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="excluir(carta.id!)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="colunasExibidas"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: colunasExibidas;"></mat-row>
+    </mat-table>
+  } @else {
     <div class="loading-data">
       <mat-spinner></mat-spinner>
       <p>Carregando cartas...</p>
     </div>
   }
-
-  <mat-table [dataSource]="cartas" class="mat-elevation-z8">
-
-    <ng-container matColumnDef="nome">
-      <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
-      <mat-cell *matCellDef="let carta"> {{ carta.nome }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="colecao">
-      <mat-header-cell *matHeaderCellDef> Coleção </mat-header-cell>
-      <mat-cell *matCellDef="let carta"> {{ carta.colecao }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="raridade">
-      <mat-header-cell *matHeaderCellDef> Raridade </mat-header-cell>
-      <mat-cell *matCellDef="let carta"> {{ carta.raridade }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="preco">
-      <mat-header-cell *matHeaderCellDef> Preço </mat-header-cell>
-      <mat-cell *matCellDef="let carta"> {{ carta.preco | currency:'BRL' }} </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="estoque">
-      <mat-header-cell *matHeaderCellDef> Estoque </mat-header-cell>
-      <mat-cell *matCellDef="let carta"> {{ carta.estoque }} un </mat-cell>
-    </ng-container>
-
-    <ng-container matColumnDef="acoes">
-      <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
-      <mat-cell *matCellDef="let carta">
-        <button mat-icon-button color="accent" [routerLink]="['/admin/cartas/editar', carta.id]">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-icon-button color="warn" (click)="excluir(carta.id!)">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="colunasExibidas"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: colunasExibidas;"></mat-row>
-  </mat-table>
 </div>

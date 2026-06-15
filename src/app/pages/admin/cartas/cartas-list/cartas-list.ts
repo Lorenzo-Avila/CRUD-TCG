@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CartasService } from '../../../../services/cartas-service';
 import { Cartas } from '../../../../model/cartas';
+import { Observable } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
@@ -22,17 +23,13 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './cartas-list.scss',
 })
 export class CartasList implements OnInit {
-  cartas: Cartas[] = [];
-  loading = true;
+  cartas$!: Observable<Cartas[]>;
   colunasExibidas: string[] = ['nome', 'colecao', 'raridade', 'preco', 'estoque', 'acoes'];
 
   constructor(private service: CartasService) {}
 
   ngOnInit() {
-    this.service.listar().subscribe((resposta) => {
-      this.loading = false;
-      this.cartas = resposta;
-    });
+    this.cartas$ = this.service.listar();
   }
 
   excluir(id: string) {
