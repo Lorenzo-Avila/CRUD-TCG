@@ -1,12 +1,19 @@
 <div class="container-lista">
   <h2>Estoque de Cartas Pokémon TCG</h2>
-  
-  <button mat-raised-button color="primary" routerLink="/cartas/nova" class="btn-novo">
+
+  <button mat-raised-button color="primary" routerLink="/admin/cartas/novo" class="btn-novo">
     Cadastrar Nova Carta
   </button>
 
-  <mat-table [dataSource]="cartas$" class="mat-elevation-z8">
-    
+  @if (loading) {
+    <div class="loading-data">
+      <mat-spinner></mat-spinner>
+      <p>Carregando cartas...</p>
+    </div>
+  }
+
+  <mat-table [dataSource]="cartas" class="mat-elevation-z8">
+
     <ng-container matColumnDef="nome">
       <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
       <mat-cell *matCellDef="let carta"> {{ carta.nome }} </mat-cell>
@@ -35,7 +42,7 @@
     <ng-container matColumnDef="acoes">
       <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
       <mat-cell *matCellDef="let carta">
-        <button mat-icon-button color="accent" [routerLink]="['/cartas/editar', carta.id]">
+        <button mat-icon-button color="accent" [routerLink]="['/admin/cartas/editar', carta.id]">
           <mat-icon>edit</mat-icon>
         </button>
         <button mat-icon-button color="warn" (click)="excluir(carta.id!)">

@@ -1,5 +1,5 @@
 export interface Cartas {
-  id?: string;      
+  id?: string;     
   nome: string;
   foto: string;
   colecao: string;
