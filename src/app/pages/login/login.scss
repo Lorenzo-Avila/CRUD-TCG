@@ -1,14 +1,13 @@
-// Container do login
+
 .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 1em;
 }
 
-// Card do login
+
 .login-card {
     background-color: white;
     border-radius: 8px;
@@ -18,7 +17,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-// Título
+
 h1 {
     color: #1a237e;
     text-align: center;
@@ -26,7 +25,7 @@ h1 {
     font-size: 1.8em;
 }
 
-// Subtítulo
+
 .login-subtitle {
     text-align: center;
     color: #757575;
@@ -34,12 +33,12 @@ h1 {
     font-size: 0.95em;
 }
 
-// Formulário
+
 .login-form {
     margin-bottom: 1.5em;
 }
 
-// Grupo de formulário
+
 .form-group {
     margin-bottom: 1.5em;
     
@@ -52,7 +51,6 @@ h1 {
     }
 }
 
-// Input
 .form-input {
     width: 100%;
     padding: 0.75em;
@@ -68,7 +66,7 @@ h1 {
     }
 }
 
-// Botão de login
+
 .btn-login {
     width: 100%;
     padding: 0.9em;
@@ -92,7 +90,7 @@ h1 {
     }
 }
 
-// Footer
+
 .login-footer {
     text-align: center;
     color: #757575;
@@ -110,7 +108,7 @@ h1 {
     }
 }
 
-// Alerta de erro
+
 .alerta-erro {
     background-color: #ffebee;
     color: #c62828;

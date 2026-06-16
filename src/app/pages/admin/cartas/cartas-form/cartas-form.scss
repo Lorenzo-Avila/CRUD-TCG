@@ -1,10 +1,9 @@
-// Formulário
 form {
     padding: 1.5em;
     max-width: 600px;
 }
 
-// Campos do formulário
+
 mat-form-field {
     display: block;
     margin-bottom: 1.2em;
@@ -15,13 +14,13 @@ mat-form-field {
     }
 }
 
-// Divisor visual
+
 mat-divider {
     margin: 1.5em 0;
     opacity: 0.5;
 }
 
-// Botões de ação
+
 .botoes-acao {
     display: flex;
     gap: 0.75em;

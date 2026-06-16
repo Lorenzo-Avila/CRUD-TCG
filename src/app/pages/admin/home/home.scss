@@ -1,11 +1,10 @@
-// Container principal
 .home-container {
     padding: 2em;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-// Cabeçalho
+
 h1, h2 {
     color: #1a237e;
     margin-bottom: 1.5em;
@@ -13,7 +12,6 @@ h1, h2 {
     letter-spacing: 0.5px;
 }
 
-// Cards/seções
 .section {
     background-color: #f5f5f5;
     border-radius: 8px;
@@ -27,7 +25,7 @@ h1, h2 {
     }
 }
 
-// Botões
+
 button, a.btn {
     padding: 0.75em 1.5em;
     border-radius: 6px;
@@ -42,13 +40,12 @@ button, a.btn {
     }
 }
 
-// Textos informativos
+
 p {
     line-height: 1.6;
     color: #424242;
 }
 
-// Lista de itens
 ul, ol {
     line-height: 1.8;
     color: #424242;
